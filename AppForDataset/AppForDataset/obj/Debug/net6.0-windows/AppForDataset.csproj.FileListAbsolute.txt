@@ -1,0 +1,17 @@
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\bin\Debug\net6.0-windows\AppForDataset.exe
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\bin\Debug\net6.0-windows\AppForDataset.deps.json
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\bin\Debug\net6.0-windows\AppForDataset.runtimeconfig.json
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\bin\Debug\net6.0-windows\AppForDataset.dll
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\bin\Debug\net6.0-windows\AppForDataset.pdb
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.csproj.AssemblyReference.cache
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.MainForm.resources
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.csproj.GenerateResource.cache
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.GeneratedMSBuildEditorConfig.editorconfig
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.AssemblyInfoInputs.cache
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.AssemblyInfo.cs
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.csproj.CoreCompileInputs.cache
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.dll
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\refint\AppForDataset.dll
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.pdb
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.genruntimeconfig.cache
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\ref\AppForDataset.dll
