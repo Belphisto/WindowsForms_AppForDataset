@@ -1,0 +1,13 @@
+<?xml version="1.0" standalone="yes"?>
+<CommissionStoreDataSet>
+  <Items>
+    <Name>Абоба</Name>
+    <Date>2002-02-12T00:00:00+05:00</Date>
+    <InitialPrice>123</InitialPrice>
+  </Items>
+  <Items>
+    <Name>Абоба2</Name>
+    <Date>2003-02-12T00:00:00+05:00</Date>
+    <InitialPrice>1234</InitialPrice>
+  </Items>
+</CommissionStoreDataSet>

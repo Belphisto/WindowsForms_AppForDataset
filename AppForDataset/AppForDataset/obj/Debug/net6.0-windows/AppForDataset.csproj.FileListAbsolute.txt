@@ -15,3 +15,4 @@ E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\A
 E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.pdb
 E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.genruntimeconfig.cache
 E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\ref\AppForDataset.dll
+E:\Лена документы\GitHub\WindowsForms_AppForDataset\AppForDataset\AppForDataset\obj\Debug\net6.0-windows\AppForDataset.UserInputForm.resources
