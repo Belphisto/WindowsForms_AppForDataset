@@ -21,6 +21,8 @@ namespace AppForDataset
             InitializeDataSet();
             InitializeUI();
         }
+
+        //метод для инициализации вспомогательных кнопок. привязка к ним реализованных методов
         private void InitializeUI()
         {
             CreateToolStripButton.Click += CreateToolStripMenuItem_Click;
@@ -29,21 +31,21 @@ namespace AppForDataset
             AboutProgrammToolStripButton.Click += AboutProgrammToolStripMenuItem_Click;
         }
 
-
+        //инициализация датасета и дататейбл
         private void InitializeDataSet()
         {
             productsSet = new DataSet("CommissionStoreDataSet");
             products = new DataTable("Items");
 
-            // Add field in table
+            // Добавление полей в таблицу
             products.Columns.Add("Name", typeof(string));
             products.Columns.Add("Date", typeof(DateTime));
             products.Columns.Add("InitialPrice", typeof(decimal));
 
-            // Set "Name" as the primary key
+            // Установка поля "наименование" как первичный ключ
             products.PrimaryKey = new DataColumn[] { products.Columns["Name"] };
 
-            // Add table in DataSet
+            // Добавление таблицы в датасет
             productsSet.Tables.Add(products);
 
             // Создание BindingSource и привязка его к DataSet
@@ -52,34 +54,10 @@ namespace AppForDataset
 
             // Привязка DataGridView к BindingSource
             dataGridView1.DataSource = bindingSource;
-
-            // Hook up the event handler for editing control showing
-            //dataGridView1.EditingControlShowing += DataGridView1_EditingControlShowing;
         }
 
         private void DataGridView1_EditingControlShowing(object sender, DataGridViewEditingControlShowingEventArgs e)
         {
-            if (dataGridView1.CurrentCell.OwningColumn.Name == "Date")
-            {
-                if (e.Control is DataGridViewTextBoxEditingControl textBox)
-                {
-                    // Apply date format
-                    //textBox.KeyPress -= DateTextBox_KeyPress; // to prevent event hooking multiple times
-                    //textBox.KeyPress += DateTextBox_KeyPress;
-
-                    // Set the format when the cell is being edited
-                    //textBox.Text = FormatDate(textBox.Text);
-                }
-            }
-            else if (dataGridView1.CurrentCell.OwningColumn.Name == "InitialPrice")
-            {
-                if (e.Control is DataGridViewTextBoxEditingControl textBox)
-                {
-                    // Apply numeric format
-                    //textBox.KeyPress -= NumericTextBox_KeyPress; // to prevent event hooking multiple times
-                    //textBox.KeyPress += NumericTextBox_KeyPress;
-                }
-            }
         }
 
         private void DateTextBox_KeyPress(object sender, KeyPressEventArgs e)
@@ -100,11 +78,12 @@ namespace AppForDataset
             }
         }
 
+        //метод открытия файла
         private void OpenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (productsSet.Tables["Items"].Rows.Count != 0)
             {
-                DialogResult result = MessageBox.Show("Do you want save this dataset?", "Saving?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                DialogResult result = MessageBox.Show("Сохранить текущий набор данных?", "Сохранение", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
                     SaveToolStripMenuItem_Click(sender, e);
@@ -150,7 +129,7 @@ namespace AppForDataset
             //
             if (productsSet.Tables["Items"].Rows.Count != 0)
             {
-                DialogResult result = MessageBox.Show("Do you want save this dataset?", "Saving?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                DialogResult result = MessageBox.Show("Сохранить текущий набор данных?", "Сохранение?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
                     SaveToolStripMenuItem_Click(sender, e);
@@ -170,7 +149,7 @@ namespace AppForDataset
         {
             if (productsSet.Tables["Items"].Rows.Count != 0)
             {
-                DialogResult result = MessageBox.Show("Do you want save this dataset?", "Saving?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
+                DialogResult result = MessageBox.Show("Сохранить текущий набор данных?", "Сохранение?", MessageBoxButtons.YesNoCancel, MessageBoxIcon.Information);
                 if (result == DialogResult.Yes)
                 {
                     SaveToolStripMenuItem_Click(sender, e);
@@ -187,10 +166,10 @@ namespace AppForDataset
         private void AboutProgrammToolStripMenuItem_Click(object sender, EventArgs e)
         {
             //
-            MessageBox.Show("Project Windows Forms\n" +
-                "Target Platform: .Net 6.0 (long-term support)\n\n" +
-                "Completed by: Maria Antaleeva\n" +
-                "group: EU-239\n\n\n", "About Programm");
+            MessageBox.Show("Проект Windows Forms\n" +
+                "Целевая платформа: .Net 6.0 (долгосрочная поддержка)\n\n" +
+                "Выполнила: Maria Antaleeva\n" +
+                "Группа: ЭУ-239\n\n\n", "About Programm");
         }
 
         private void UpdatePriceToolStripMenuItem_Click(object sender, EventArgs e)
@@ -284,16 +263,16 @@ namespace AppForDataset
                 if (foundRow != null)
                 {
                     products.Rows.Remove(foundRow);
-                    MessageBox.Show("Product sold successfully.", "Success", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Товар продан успешно.", "Успех", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
                 else
                 {
-                    MessageBox.Show("Selected row not found in DataTable.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("В таблице строка товара не выбрана", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else
             {
-                MessageBox.Show("Please select a row to sell.", "Warning", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+                MessageBox.Show("Пожалуйста, выберите строку с товаром для продажи.", "Предупреждение", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -303,7 +282,7 @@ namespace AppForDataset
             Exception ex = e.Exception;
 
             // Log or display a custom error message
-            MessageBox.Show($"Error in DataGridView: {ex.Message}\n\n DateFormat:dd/mm/YYYY or dd.mm.YYYY \n price format: 12,12 ", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            MessageBox.Show($"Ошибка при вводе данных: {ex.Message}\n\n формат даты:dd/mm/YYYY or dd.mm.YYYY \n формат цены: 12,12 ", "Ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
             // Optionally, set the error status to Handled if you've handled the error
             e.ThrowException = false;
