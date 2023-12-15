@@ -45,8 +45,17 @@
             toolStripSeparator5 = new ToolStripSeparator();
             AboutProgrammToolStripMenuItem = new ToolStripMenuItem();
             dataGridView1 = new DataGridView();
+            toolStrip1 = new ToolStrip();
+            CreateToolStripButton = new ToolStripButton();
+            OpenToolStripButton = new ToolStripButton();
+            SaveToolStripButton = new ToolStripButton();
+            toolStripSeparator3 = new ToolStripSeparator();
+            toolStripSeparator6 = new ToolStripSeparator();
+            AboutProgrammToolStripButton = new ToolStripButton();
+            SellToolStripMenuItem = new ToolStripMenuItem();
             menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
+            toolStrip1.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -71,7 +80,7 @@
             CreateToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             CreateToolStripMenuItem.Name = "CreateToolStripMenuItem";
             CreateToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.N;
-            CreateToolStripMenuItem.Size = new Size(173, 22);
+            CreateToolStripMenuItem.Size = new Size(180, 22);
             CreateToolStripMenuItem.Text = "&Создать";
             CreateToolStripMenuItem.Click += CreateToolStripMenuItem_Click;
             // 
@@ -81,14 +90,14 @@
             OpenToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             OpenToolStripMenuItem.Name = "OpenToolStripMenuItem";
             OpenToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.O;
-            OpenToolStripMenuItem.Size = new Size(173, 22);
+            OpenToolStripMenuItem.Size = new Size(180, 22);
             OpenToolStripMenuItem.Text = "&Открыть";
             OpenToolStripMenuItem.Click += OpenToolStripMenuItem_Click;
             // 
             // toolStripSeparator
             // 
             toolStripSeparator.Name = "toolStripSeparator";
-            toolStripSeparator.Size = new Size(170, 6);
+            toolStripSeparator.Size = new Size(177, 6);
             // 
             // SaveToolStripMenuItem
             // 
@@ -96,32 +105,32 @@
             SaveToolStripMenuItem.ImageTransparentColor = Color.Magenta;
             SaveToolStripMenuItem.Name = "SaveToolStripMenuItem";
             SaveToolStripMenuItem.ShortcutKeys = Keys.Control | Keys.S;
-            SaveToolStripMenuItem.Size = new Size(173, 22);
+            SaveToolStripMenuItem.Size = new Size(180, 22);
             SaveToolStripMenuItem.Text = "&Сохранить";
             SaveToolStripMenuItem.Click += SaveToolStripMenuItem_Click;
             // 
             // SaveAsToolStripMenuItem
             // 
             SaveAsToolStripMenuItem.Name = "SaveAsToolStripMenuItem";
-            SaveAsToolStripMenuItem.Size = new Size(173, 22);
+            SaveAsToolStripMenuItem.Size = new Size(180, 22);
             SaveAsToolStripMenuItem.Text = "Сохранить &как";
             SaveAsToolStripMenuItem.Click += SaveAsToolStripMenuItem_Click;
             // 
             // toolStripSeparator1
             // 
             toolStripSeparator1.Name = "toolStripSeparator1";
-            toolStripSeparator1.Size = new Size(170, 6);
+            toolStripSeparator1.Size = new Size(177, 6);
             // 
             // ExitToolStripMenuItem
             // 
             ExitToolStripMenuItem.Name = "ExitToolStripMenuItem";
-            ExitToolStripMenuItem.Size = new Size(173, 22);
+            ExitToolStripMenuItem.Size = new Size(180, 22);
             ExitToolStripMenuItem.Text = "Вы&ход";
             ExitToolStripMenuItem.Click += ExitToolStripMenuItem_Click;
             // 
             // операцииСДаннымиToolStripMenuItem
             // 
-            операцииСДаннымиToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { UpdatePriceToolStripMenuItem, ReturnProductToolStripMenuItem });
+            операцииСДаннымиToolStripMenuItem.DropDownItems.AddRange(new ToolStripItem[] { UpdatePriceToolStripMenuItem, ReturnProductToolStripMenuItem, SellToolStripMenuItem });
             операцииСДаннымиToolStripMenuItem.Name = "операцииСДаннымиToolStripMenuItem";
             операцииСДаннымиToolStripMenuItem.Size = new Size(138, 20);
             операцииСДаннымиToolStripMenuItem.Text = "Операции с данными";
@@ -129,15 +138,15 @@
             // UpdatePriceToolStripMenuItem
             // 
             UpdatePriceToolStripMenuItem.Name = "UpdatePriceToolStripMenuItem";
-            UpdatePriceToolStripMenuItem.Size = new Size(280, 22);
-            UpdatePriceToolStripMenuItem.Text = "Обновить цену";
+            UpdatePriceToolStripMenuItem.Size = new Size(310, 22);
+            UpdatePriceToolStripMenuItem.Text = "Провести уценку товара";
             UpdatePriceToolStripMenuItem.Click += UpdatePriceToolStripMenuItem_Click;
             // 
             // ReturnProductToolStripMenuItem
             // 
             ReturnProductToolStripMenuItem.Name = "ReturnProductToolStripMenuItem";
-            ReturnProductToolStripMenuItem.Size = new Size(280, 22);
-            ReturnProductToolStripMenuItem.Text = "Вернуть выбранный товар владельцу";
+            ReturnProductToolStripMenuItem.Size = new Size(310, 22);
+            ReturnProductToolStripMenuItem.Text = "Вернуть нераспроданный товар владельцу";
             ReturnProductToolStripMenuItem.Click += ReturnProductToolStripMenuItem_Click;
             // 
             // справкаToolStripMenuItem
@@ -150,38 +159,105 @@
             // toolStripSeparator5
             // 
             toolStripSeparator5.Name = "toolStripSeparator5";
-            toolStripSeparator5.Size = new Size(155, 6);
+            toolStripSeparator5.Size = new Size(177, 6);
             // 
             // AboutProgrammToolStripMenuItem
             // 
             AboutProgrammToolStripMenuItem.Name = "AboutProgrammToolStripMenuItem";
-            AboutProgrammToolStripMenuItem.Size = new Size(158, 22);
+            AboutProgrammToolStripMenuItem.Size = new Size(180, 22);
             AboutProgrammToolStripMenuItem.Text = "&О программе…";
             AboutProgrammToolStripMenuItem.Click += AboutProgrammToolStripMenuItem_Click;
             // 
             // dataGridView1
             // 
             dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridView1.Location = new Point(12, 27);
+            dataGridView1.Location = new Point(12, 52);
             dataGridView1.Name = "dataGridView1";
             dataGridView1.RowTemplate.Height = 25;
-            dataGridView1.Size = new Size(776, 411);
+            dataGridView1.Size = new Size(776, 386);
             dataGridView1.TabIndex = 1;
             dataGridView1.DataError += dataGridView1_DataError;
+            // 
+            // toolStrip1
+            // 
+            toolStrip1.Items.AddRange(new ToolStripItem[] { CreateToolStripButton, OpenToolStripButton, SaveToolStripButton, toolStripSeparator3, toolStripSeparator6, AboutProgrammToolStripButton });
+            toolStrip1.Location = new Point(0, 24);
+            toolStrip1.Name = "toolStrip1";
+            toolStrip1.Size = new Size(800, 25);
+            toolStrip1.TabIndex = 2;
+            toolStrip1.Text = "toolStrip1";
+            // 
+            // CreateToolStripButton
+            // 
+            CreateToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            CreateToolStripButton.Image = (Image)resources.GetObject("CreateToolStripButton.Image");
+            CreateToolStripButton.ImageTransparentColor = Color.Magenta;
+            CreateToolStripButton.Name = "CreateToolStripButton";
+            CreateToolStripButton.Size = new Size(23, 22);
+            CreateToolStripButton.Text = "&Создать";
+            // 
+            // OpenToolStripButton
+            // 
+            OpenToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            OpenToolStripButton.Image = (Image)resources.GetObject("OpenToolStripButton.Image");
+            OpenToolStripButton.ImageTransparentColor = Color.Magenta;
+            OpenToolStripButton.Name = "OpenToolStripButton";
+            OpenToolStripButton.Size = new Size(23, 22);
+            OpenToolStripButton.Text = "&Открыть";
+            // 
+            // SaveToolStripButton
+            // 
+            SaveToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            SaveToolStripButton.Image = (Image)resources.GetObject("SaveToolStripButton.Image");
+            SaveToolStripButton.ImageTransparentColor = Color.Magenta;
+            SaveToolStripButton.Name = "SaveToolStripButton";
+            SaveToolStripButton.Size = new Size(23, 22);
+            SaveToolStripButton.Text = "&Сохранить";
+            // 
+            // toolStripSeparator3
+            // 
+            toolStripSeparator3.Name = "toolStripSeparator3";
+            toolStripSeparator3.Size = new Size(6, 25);
+            // 
+            // toolStripSeparator6
+            // 
+            toolStripSeparator6.Name = "toolStripSeparator6";
+            toolStripSeparator6.Size = new Size(6, 25);
+            // 
+            // AboutProgrammToolStripButton
+            // 
+            AboutProgrammToolStripButton.DisplayStyle = ToolStripItemDisplayStyle.Image;
+            AboutProgrammToolStripButton.Image = (Image)resources.GetObject("AboutProgrammToolStripButton.Image");
+            AboutProgrammToolStripButton.ImageTransparentColor = Color.Magenta;
+            AboutProgrammToolStripButton.Name = "AboutProgrammToolStripButton";
+            AboutProgrammToolStripButton.Size = new Size(23, 22);
+            AboutProgrammToolStripButton.Text = "С&правка";
+            // 
+            // SellToolStripMenuItem
+            // 
+            SellToolStripMenuItem.Name = "SellToolStripMenuItem";
+            SellToolStripMenuItem.Size = new Size(310, 22);
+            SellToolStripMenuItem.Text = "Продать товар";
+            SellToolStripMenuItem.Click += SellToolStripMenuItem_Click;
             // 
             // MainForm
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(toolStrip1);
             Controls.Add(dataGridView1);
             Controls.Add(menuStrip1);
+            FormBorderStyle = FormBorderStyle.FixedDialog;
             MainMenuStrip = menuStrip1;
+            MinimizeBox = false;
             Name = "MainForm";
             Text = "Комиссионный магазин бытовой техники";
             menuStrip1.ResumeLayout(false);
             menuStrip1.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
+            toolStrip1.ResumeLayout(false);
+            toolStrip1.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -220,5 +296,13 @@
         private ToolStripMenuItem операцииСДаннымиToolStripMenuItem;
         private ToolStripMenuItem UpdatePriceToolStripMenuItem;
         private ToolStripMenuItem ReturnProductToolStripMenuItem;
+        private ToolStripMenuItem SellToolStripMenuItem;
+        private ToolStrip toolStrip1;
+        private ToolStripButton CreateToolStripButton;
+        private ToolStripButton OpenToolStripButton;
+        private ToolStripButton SaveToolStripButton;
+        private ToolStripSeparator toolStripSeparator3;
+        private ToolStripSeparator toolStripSeparator6;
+        private ToolStripButton AboutProgrammToolStripButton;
     }
 }
